@@ -13,6 +13,7 @@
 #COPY --from=build /app/target/*.war /usr/local/tomcat/webapps/ROOT.war
 #CMD ["catalina.sh", "run"]
 
+# Maven 빌드 스테이지
 FROM maven:3.8.5-openjdk-17 AS builder
 
 WORKDIR /app
